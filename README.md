@@ -12,3 +12,22 @@ BotSpec is a platform-independent framework for building chatbots from declarati
 + **Pluggable Session Storage & Isolation:** User sessions are strictly separated by messaging apps. Switching between local storage for testing and distributed Redis for production involves changing a single line in the configuration.
 + **Guard Pattern Actions:** Complete separation of code from the interface using a special Python decorator. Functions work with standard Python data types and can control FSM transitions via return values.
 + **Secure Environment-Driven Config:** The global YAML file that you specify when running the scenario safely retrieves tokens and database credentials from environment variables or the “.env” file using the ${VARIABLE} syntax.
+
+## Quick Start
+Get your first platform-independent chatbot running in less than two minutes using the `botspec` CLI.
+### Installation
+Install the framework:
+```bash
+pip install botspec
+```
+### Initialize a New Project
+Use build-in CLI tool to scaffold to production-ready project structure instantly.
+```bash
+botspec init my_awesome_bot
+```
+### Configure Your Environment
+Create and open `.env` file and fill your secrets:
+```env
+TELEGRAM_BOT_TOKEN=Your API token
+```
+### Run the Bot
